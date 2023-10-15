@@ -4,47 +4,133 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+
     <link rel="stylesheet" href="assets/style/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300&family=Fahkwang:ital,wght@0,400;1,300&display=swap" rel="stylesheet">      
+
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300&family=Fahkwang:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
     <div id="menu-bar">
-        <img src="assets/img/star_corner_logo.svg" alt="" id="star-corner-logo">
+        <a href="index.html"><img src="assets/img/star_corner_logo.svg" id="star-corner-logo"></a>
         <div id="right-menu-bar">
-            <div id="projects">
-                Projects
+            <div id="subteams">
+                <a href="subteams.html">Subteams</a>
             </div>
-            <div id="team">
-                Team
+            <div id="staff">
+                <a href="staff.html">Staff</a>
             </div>
             <div id="sponsors">
-                Sponsors
+                <a href="sponsors.html">Sponsors</a>
             </div>
             <div id="outreach">
-                Outreach
+                <a href="outreach.html">Outreach</a>
             </div>
             <div id="contact-us">
-                Contact Us
+                <a href="mailto:contact@stars.berkeley.edu?subject=">Contact Us</a>
             </div>
         </div>
     </div>
     
-    <img src="assets/img/cover.jpg" alt="" id="cover-img">
-    <div id="text-main-page">
-        We are<br>
-        UC Berkeley's Space Technology and Rocketry
+    <div id="dropdown">
+        <div id="dropdown-title">Projects<span class="material-symbols-outlined arrow-drop-down">arrow_drop_down</span></div>
+        <div id="dropdown-content">
+            <a href="ssep2.html" id="ssep2-drop">SSEP2</a>
+            <a href="alula.html" id="alula-drop">ALULA</a>
+        </div>
+    </div>
+    <div id="cover">
+        <img src="assets/img/cover.jpg" id="cover-img">
     </div>
 
-    <img src="assets/img/arrow_down.svg" alt="" id="arrow-down" href="#who-we-are">
-    <div id="who-we-are">
-        <div id="sub-title">
-            Who We Are
+    <div id="text-main-page">
+        <b>We are<br>
+        UC Berkeley's Space Technology and Rocketry</b>
+    </div>
+
+    <div id="arrow-button">
+        <a href="#arrow-down"><img src="assets/img/arrow_down.svg" id="arrow-down"></a>
+    </div>
+
+    <div id="paragraph">
+        <div id="strong-text">
+            <b>Who We Are</b>
         </div>
-        STAR boasts the longest and most successful launch history on campus, with a total of eight complete vehicles engineered over our half-decade lifetime, and a liquid engine!<br><br>
+        <br>STAR boasts the longest and most successful launch history on campus, with a total of eight complete vehicles engineered over our half-decade lifetime, and a liquid engine!<br><br>
 
         These vehicles have been completely student-designed and tested, from our in-house avionics to our liquid-fuel propulsion to our array of payloads -- ranging from microbial power cells to muon detectors, and even rocket-deployed aircraft! STAR also boasts the longest competition history on campus, having previously launched as NASA Student Launch, and now participating in the ESRA Spaceport America Cup.
     </div>
+    <div id="team-photo-text">
+        <div id="team-sub">
+            <span id="team-num"><b>9</b></span>Completed Vehicles
+        </div>
+        <div id="team-sub">
+            <span id="team-num"><b>2</b></span>Liquid Engines
+        </div>
+        <div id="team-sub">
+            <span id="team-num"><b>10</b></span>Subteams
+        </div>
+    </div>
+    <img src="assets/img/team_photo.jpg" id="team-photo">
+
+    <div id="paragraph">
+        <div id="strong-text">
+            <b>Our Ambitions</b>
+        </div>
+        <br>
+        <div id="ambitions">
+            <div id="ambitions-sub">
+                <span class="material-symbols-outlined ambitions-icon">rocket</span>
+                <b>Competitions</b>
+                <br><span id="ambitions-about">Reaching new heights in national and international rocketry competitions</span>
+            </div>
+            <div id="ambitions-sub">
+                <span class="material-symbols-outlined ambitions-icon">handshake</span>
+                <b>Connections</b>
+                <br><span id="ambitions-about">Gaining industry-level experience and making lifelong friendships</span>
+            </div>
+            <div id="ambitions-sub">
+                <span class="material-symbols-outlined ambitions-icon">groups</span>
+                <b>Community</b>
+                <br><span id="ambitions-about">Educating local students and residents about aerospace technologies</span>
+            </div>
+        </div>
+    </div>
+    <div id="interesting">
+        <div id="paragraph">
+            <div id="strong-text">
+                <b>Sounds Interesting?</b>
+            </div>
+            <br>What makes STAR special is that we are a very education-focused team, and new members do not need any prior experience at all -- we teach them everything they need to know! We pair all new members with a mentor and have them complete an intro project which will teach them everything they need to know to become a fully functional member of our team.
+        
+            <br><br>We have a variety of sub-teams available to our members like airframe, avionics, propulsion, payload, recovery, operations, systems, business, outreach, and media. We welcome all majors and backgrounds!
+        
+            <br><br>Regular recruitment season begins at the start of Fall semester, though if you are super passionate please contact the lead of the team you are interested in to enquirement further information (Found under Teams > Specialty Leads)
+        </div>
+    </div>
+    <footer style="margin-top: -100px;">
+        <div style="width: 456px">
+            <div>
+                <a href="https://www.facebook.com/ucberkeleystar/"><img src="assets/img/facebook.svg" id="social"></a>
+                <a href="https://www.instagram.com/starberkeley/"><img src="assets/img/instagram.svg" id="social"></a>
+                <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA"><img src="assets/img/youtube.svg" id="social"></a>
+                <a href="https://www.linkedin.com/company/calstar"><img src="assets/img/linkedin.svg" id="social"></a>
+            </div>
+            <div style="font-size: 10pt;">
+                © 2023 by Space Technologies and Rocketry
+            </div>
+        </div>
+        
+        <div id="contact-us" style="font-size: 30pt;">
+            <a href="mailto:contact@stars.berkeley.edu?subject=">Contact Us</a>
+        </div>
+
+        <div style="width: 456px; font-size: 10pt;">
+            <span style="font-size: 20pt;">Join Today!</span><br>
+            For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs .
+        </div>
+    </footer>
 </body>
 </html>

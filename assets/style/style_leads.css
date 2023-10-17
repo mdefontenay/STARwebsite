@@ -1,0 +1,57 @@
+@keyframes zoom {
+    0% {scale: 1}
+    100% {scale: 1.05}
+}
+@keyframes unzoom {
+    0% {scale: 1.05}
+    100% {scale: 1}
+}
+
+#lead-title {
+    font-size: 40pt;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 25px;
+}
+.card {
+    background-color: rgba(255, 255, 255, 0.1);
+    width: 350px;
+    height: 710px;
+    border-radius: 30px;
+    margin: 25px;
+}
+.card:hover {
+    animation: zoom 0.2s;
+    scale: 1.05;
+}
+.card:not(hover) {
+    animation: unzoom 0.2s;
+}
+
+#profil-pic {
+    width: 350px;
+    border-radius: 30px;
+}
+#card-text {
+    padding: 20px;
+    font-size: 10pt;
+}
+#name {
+    font-size: 14pt;
+    font-weight: bolder;
+    margin: 7px 0;
+}
+#position, #major {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11pt;
+    margin: 7px 0;
+}
+#bio {
+    margin: 15px 0;
+}

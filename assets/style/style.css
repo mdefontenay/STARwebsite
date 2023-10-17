@@ -28,16 +28,22 @@ a:hover {
     100% {opacity: 1;}
 }
 
-#cover-img {
+/* ---------------- Cover ----------------*/
+
+.cover-img {
     z-index: -1;
     width: 100%;
-    height: 830px;
+    height: 825px;
     object-fit: cover;
     opacity: 80%;
     align-items: center;
     border-radius: 0 0 45px 45px;
 }
-#text-main-page {
+#small-cover-img {
+    height: 400px;
+    opacity: 50%;
+}
+.text-main-page {
     position: absolute;
     margin-top: -510px;
     margin-left: -10px;
@@ -46,6 +52,13 @@ a:hover {
     text-align: right;
     font-size: 30pt;
 
+    z-index: 1;
+}
+.small-text-main-page {
+    position: absolute;
+    margin-left: calc(50% - 149.5px);
+    font-size: 30pt;
+    margin-top: -210px;
     z-index: 1;
 }
 
@@ -90,11 +103,11 @@ a:hover {
 }
 
 #star-corner-logo:hover, #subteams:hover, #staff:hover, #sponsors:hover, #outreach:hover {
-    animation: fade 0.2s linear;
+    animation: fade 0.2s;
     opacity: 0.7;
 }
-#star-corner-logo:not(:hover) #subteams:not(:hover), #staff:not(:hover), #sponsors:not(:hover), #outreach:not(:hover) {
-    animation: unfade 0.2s linear;
+#star-corner-logo:not(:hover), #subteams:not(:hover), #staff:not(:hover), #sponsors:not(:hover), #outreach:not(:hover) {
+    animation: unfade 0.2s;
     opacity: 1;
 }
 
@@ -110,7 +123,7 @@ span.arrow-drop-down {
 
     right: 0;
     margin-top: 18px;
-    margin-right: 665px;
+    margin-right: 675px;
 
     font-size: 17pt;
 }
@@ -120,7 +133,7 @@ span.arrow-drop-down {
 }
 #dropdown-title:hover {
     cursor: pointer;
-    animation: fade 0.2s linear;
+    animation: fade 0.2s;
     opacity: 0.7;
 }
 #dropdown-title:not(:hover) {
@@ -131,38 +144,38 @@ span.arrow-drop-down {
 /* ---------------- Dropdown Content ----------------*/
 
 @keyframes drop-unfade {
-    0% {opacity: 0; margin-top: 12px;}
-    100% {opacity: 1; margin-top: 17px; backdrop-filter: blur(10px);}
+    0% {opacity: 0; margin-top: 17px;}
+    100% {opacity: 1; margin-top: 22px;}
 }
 @keyframes drop-fade {
-    0% {opacity: 1; margin-top: 17px; display: flex; backdrop-filter: blur(10px);}
-    100% {opacity: 0; margin-top: 12px;}
+    0% {opacity: 1; margin-top: 22px; display: flex;}
+    100% {opacity: 0; margin-top: 17px;}
 }
 
 #dropdown-content {
     flex-direction: column;
-    margin-top: 17px;
+    margin-top: 22px;
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    background-color: rgb(6, 14, 26, 0.1);
 }
 #ssep2-drop { /* Upper border radius */
     border-radius: 20px 20px 0 0;
-    margin-top: 5px;
 }
 #alula-drop { /* Lower border radius */
     border-radius: 0 0 20px 20px;
 }
 
 #dropdown:hover #dropdown-content {
-    animation: drop-unfade 0.2s linear;
+    animation: drop-unfade 0.2s;
     display: flex;
 }
 #dropdown:not(:hover) #dropdown-content {
-    animation: drop-fade 0.2s linear;
+    animation: drop-fade 0.2s;
     display: none;
 }
 #dropdown-content a {
     padding: 12px 16px;
-    backdrop-filter: blur(10px);
-    background-color: rgb(6, 14, 26, 0.1);
 }
 #dropdown-content a:hover {
     background-color: white;
@@ -185,12 +198,12 @@ span.arrow-drop-down {
     border-radius: 100px;
 }
 #contact-us:hover {
-    animation: contact-us-fade 0.2s linear;
+    animation: contact-us-fade 0.2s;
     color: black;
     background-color: white;
 }
 #contact-us:not(:hover) {
-    animation: contact-us-unfade 0.2s linear;
+    animation: contact-us-unfade 0.2s;
 }
 
 /* ---------------- Arrow Down Button ----------------*/
@@ -253,7 +266,7 @@ span.arrow-drop-down {
 #team-photo-text {
     height: 500px;
     align-items: center;
-    padding: 0 70px 0 70px;
+    padding: 0 120px;
 
     display: flex;
     justify-content: space-around;
@@ -272,12 +285,12 @@ span.arrow-drop-down {
 /* ---------------- Ambitions ----------------*/
 
 @keyframes ambitions-highlight {
-    0% {background-color: rgba(0, 0, 0, 0);}
-    100% {background-color: rgba(255, 255, 255, 0.1);}
+    0% {background-color: rgba(0, 0, 0, 0); scale: 1;}
+    100% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05;}
 }
 @keyframes ambitions-dimmed {
-    0% {background-color: rgba(255, 255, 255, 0.1);}
-    100% {background-color: rgba(0, 0, 0, 0);}
+    0% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05}
+    100% {background-color: rgba(0, 0, 0, 0); scale: 1;}
 }
 
 span.ambitions-icon {
@@ -293,7 +306,6 @@ span.ambitions-icon {
 #ambitions {
     align-items: center;
     margin: 0 70px;
-
     display: flex;
     justify-content: space-around;
 }
@@ -317,11 +329,12 @@ span.ambitions-icon {
 }
 
 #ambitions-sub:hover {
-    animation: ambitions-highlight 0.2s linear;
+    animation: ambitions-highlight 0.2s;
     background-color: rgba(255, 255, 255, 0.1);
+    scale: 1.05;
 }
 #ambitions-sub:not(:hover) {
-    animation: ambitions-dimmed 0.2s linear;
+    animation: ambitions-dimmed 0.2s;
     background-color: rgba(0, 0, 0, 0);
 }
 
@@ -329,7 +342,7 @@ span.ambitions-icon {
 
 #interesting {
     background-color: rgba(255, 255, 255, 0.1);
-    padding-bottom: 100px;
+    padding-bottom: 60px;
     border-radius: 45px 45px 0 0;
 }
 
@@ -347,10 +360,10 @@ footer {
     width: 50px;
 }
 #social:hover {
-    animation: fade 0.2s linear;
+    animation: fade 0.2s;
     opacity: 0.7;
 }
 #social:not(:hover) {
-    animation: unfade 0.2s linear;
+    animation: unfade 0.2s;
     opacity: 1;
 }

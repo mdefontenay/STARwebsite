@@ -451,7 +451,6 @@ footer {
     height: 30px;
     width: 30px;
     margin-right: 10px;
-    opacity: 50%;
 }
 #contacts-icon:hover {
     animation: fade 0.2s;

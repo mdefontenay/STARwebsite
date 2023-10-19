@@ -19,6 +19,23 @@ a:hover {
     cursor: pointer;
 }
 
+table {
+    border-collapse: collapse;
+    margin: auto;
+    border-radius: 30px;
+}
+  
+td, th {
+    border: 2px solid white;
+    text-align: left;
+    padding: 10px;
+}
+
+tr:last-child {
+    background-color: rgba(255, 255, 255, 0.1);
+    border-collapse: separate;
+}
+
 @keyframes fade {
     0% {opacity: 1;}
     100% {opacity: 0.7;}
@@ -56,7 +73,6 @@ a:hover {
 }
 .small-text-main-page {
     position: absolute;
-    margin-left: calc(50% - 149.5px);
     font-size: 30pt;
     margin-top: -210px;
     z-index: 1;
@@ -132,13 +148,11 @@ span.arrow-drop-down {
     width: 125px;
 }
 #dropdown-title:hover {
-    cursor: pointer;
     animation: fade 0.2s;
     opacity: 0.7;
 }
 #dropdown-title:not(:hover) {
     animation: unfade 0.2s ease-out;
-    opacity: 1;
 }
 
 /* ---------------- Dropdown Content ----------------*/
@@ -246,8 +260,9 @@ span.arrow-drop-down {
     text-align: center;
 }
 
-#paragraph {
+.paragraph {
     padding: 40px 200px 40px 200px;
+    border-radius: 45px 45px 0 0;
 }
 
 /* ---------------- Team Picture ----------------*/
@@ -286,11 +301,11 @@ span.arrow-drop-down {
 
 @keyframes ambitions-highlight {
     0% {background-color: rgba(0, 0, 0, 0); scale: 1;}
-    100% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05;}
+    100% {background-color: rgb(33, 39, 48); scale: 1.05;}
 }
 @keyframes ambitions-dimmed {
-    0% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05}
-    100% {background-color: rgba(0, 0, 0, 0); scale: 1;}
+    0% {background-color: rgb(33, 39, 48); scale: 1.05}
+    100% {background-color: rgb(0, 0, 0, 0); scale: 1;}
 }
 
 span.ambitions-icon {
@@ -320,8 +335,6 @@ span.ambitions-icon {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-
-    background-color: rgba(255, 255, 255, 0.1);
 }
 #ambitions-about {
     font-size: 15pt;
@@ -330,18 +343,17 @@ span.ambitions-icon {
 
 #ambitions-sub:hover {
     animation: ambitions-highlight 0.2s;
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(33, 39, 48);
     scale: 1.05;
 }
 #ambitions-sub:not(:hover) {
     animation: ambitions-dimmed 0.2s;
-    background-color: rgba(0, 0, 0, 0);
 }
 
 /* ---------------- Interesting ----------------*/
 
 #interesting {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgb(33, 39, 48);
     padding-bottom: 60px;
     border-radius: 45px 45px 0 0;
 }
@@ -365,5 +377,100 @@ footer {
 }
 #social:not(:hover) {
     animation: unfade 0.2s;
-    opacity: 1;
+}
+
+/* ---------------------------------------*/
+/* ---------------- Leads ----------------*/
+/* ---------------------------------------*/
+
+@keyframes zoom {
+    0% {scale: 1}
+    100% {scale: 1.05}
+}
+@keyframes unzoom {
+    0% {scale: 1.05}
+    100% {scale: 1}
+}
+
+#lead-title {
+    font-size: 40pt;
+    text-align: center;
+    margin: 25px 0;
+}
+
+.card-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 25px;
+}
+.card {
+    background-color: rgb(33, 39, 48);
+    width: 350px;
+    height: 758px;
+    border-radius: 30px;
+    margin: 25px;
+}
+.card:hover {
+    animation: zoom 0.2s;
+    scale: 1.05;
+}
+.card:not(hover) {
+    animation: unzoom 0.2s;
+}
+
+#profil-pic {
+    width: 350px;
+    border-radius: 30px;
+}
+#card-text {
+    padding: 20px;
+    font-size: 10pt;
+}
+#name {
+    font-size: 14pt;
+    font-weight: bolder;
+    margin: 7px 0;
+}
+#position, #major {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11pt;
+    margin: 7px 0;
+}
+.long-major {
+    margin-top: -18.5px;
+}
+#bio {
+    margin: 15px 0;
+    height: 221px;
+}
+#contacts {
+    height: 30px;
+}
+#contacts-icon {
+    height: 30px;
+    width: 30px;
+    margin-right: 10px;
+    opacity: 50%;
+}
+#contacts-icon:hover {
+    animation: fade 0.2s;
+    opacity: 0.7;
+}
+#contacts-icon:not(:hover) {
+    animation: unfade 0.2s ease-out;
+}
+
+/* ------------------------------------------*/
+/* ---------------- Outreach ----------------*/
+/* ------------------------------------------*/
+
+.the-problem {
+    background-color: rgb(21, 26, 37);
+    padding-bottom: 90px;
+}
+.the-solution {
+    background-color: rgb(33, 39, 48);
+    margin-top: -45px;
+    padding-bottom: 90px;
 }

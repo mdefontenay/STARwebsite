@@ -1,3 +1,4 @@
+<!-- Made by Matthieu Bourdeau de Fontenay, Student at UCB, Physics Major :) -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,8 +12,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300&family=Fahkwang:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+
+    <script src="assets/script/script.js"></script>
 </head>
-<body>
+<body class="preload">
     <div id="menu-bar">
         <a href="index.html"><img src="assets/img/star_corner_logo.svg" id="star-corner-logo"></a>
         <div id="right-menu-bar">
@@ -28,9 +31,11 @@
             <div id="outreach">
                 <a href="outreach.html">Outreach</a>
             </div>
-            <div id="contact-us">
-                <a href="join_us.html">Join Us</a>
-            </div>
+            <a href="join_us.html">
+                <div id="contact-us">
+                    Join Us
+                </div>
+            </a>
         </div>
     </div>
     
@@ -121,27 +126,35 @@
     </div>
 
     <footer style="margin-top: -45px;">
-        <div style="width: 456px">
-            <div>
-                <a href="https://www.facebook.com/ucberkeleystar/"><img src="assets/img/icons/facebook.svg" id="social"></a>
-                <a href="https://www.instagram.com/starberkeley/"><img src="assets/img/icons/instagram.svg" id="social"></a>
-                <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA"><img src="assets/img/icons/youtube.svg" id="social"></a>
-                <a href="https://www.linkedin.com/company/calstar"><img src="assets/img/icons/linkedin.svg" id="social"></a>
+        <div class="footer-content">
+            <div style="width: 456px">
+                <div>
+                    <a href="https://www.facebook.com/ucberkeleystar/" target="_blank"><img src="assets/img/icons/facebook.svg" id="social"></a>
+                    <a href="https://www.instagram.com/starberkeley/" target="_blank"><img src="assets/img/icons/instagram.svg" id="social"></a>
+                    <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA" target="_blank"><img src="assets/img/icons/youtube.svg" id="social"></a>
+                    <a href="https://www.linkedin.com/company/calstar" target="_blank"><img src="assets/img/icons/linkedin.svg" id="social"></a>
+                </div>
+                <div style="font-size: 10pt;">
+                    © 2023 by Space Technologies and Rocketry
+                </div>
             </div>
-            <div style="font-size: 10pt;">
-                © 2023 by Space Technologies and Rocketry
+            
+            <div style="width: 456px; text-align: center;">
+                <a href="mailto:contact@stars.berkeley.edu?subject=">
+                    <div id="contact-us" style="font-size: 30pt; width: 220px;">
+                        Contact Us
+                    </div>
+                </a>
+            </div>
+    
+            <div style="width: 456px; font-size: 10pt;">
+                <span style="font-size: 20pt;">Join Today!</span><br>
+                For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs .
             </div>
         </div>
-        
-        <div style="width: 456px; text-align: center;">
-            <div id="contact-us" style="font-size: 30pt; width: 220px;">
-                <a href="">Contact Us</a>
-            </div>
-        </div>
-
-        <div style="width: 456px; font-size: 10pt;">
-            <span style="font-size: 20pt;">Join Today!</span><br>
-            For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs .
+        <div class="ocf">
+            <a href="https://www.ocf.berkeley.edu/" target="_blank"><img src="assets/img/icons/ocf-hosted-penguin-dark.svg" style="width: 70px;"></a>
+            <span style="margin: auto 0 auto 10px">We are a student group acting independently of the University of California. We take full responsibility for our organization and this website.</span>
         </div>
     </footer>
 </body>

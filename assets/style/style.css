@@ -10,6 +10,10 @@ body {
     margin: 0;
     background-color: rgb(6, 14, 26);
 }
+.preload *{
+    animation-duration: 0s !important;
+    -webkit-animation-duration: 0s !important;
+    transition:background-color 0s, opacity 0s, color 0s, width 0s, height 0s, padding 0s, margin 0s !important;}
 
 a {
     text-decoration: none;
@@ -44,6 +48,22 @@ tr:last-child {
     0% {opacity: 0.7;}
     100% {opacity: 1;}
 }
+@keyframes white-fade {
+    0% {color: white; background-color: transparent;}
+    100% {color: black; background-color: white;}
+}
+@keyframes white-unfade {
+    0% {color: black; background-color: white;}
+    100% {color: white;}
+}
+@keyframes zoom {
+    0% {scale: 1}
+    100% {scale: 1.05}
+}
+@keyframes unzoom {
+    0% {scale: 1.05}
+    100% {scale: 1}
+}
 
 /* ---------------- Cover ----------------*/
 
@@ -74,6 +94,8 @@ tr:last-child {
 }
 .small-text-main-page {
     position: absolute;
+    width: 100%;
+    text-align: center;
     font-size: 30pt;
     margin-top: -210px;
     z-index: 1;
@@ -190,35 +212,28 @@ span.arrow-drop-down {
     display: none;
 }
 #dropdown-content a {
+    animation: white-unfade 0.2s;
     padding: 12px 16px;
 }
 #dropdown-content a:hover {
+    animation: white-fade 0.2s;
     background-color: white;
     color: black;
 }
 
-/* ---------------- Contact Us Button ----------------*/
-
-@keyframes contact-us-fade {
-    0% {color: white;}
-    100% {color: black; background-color: white;}
-}
-@keyframes contact-us-unfade {
-    0% {color: black; background-color: white;}
-    100% {color: white;}
-}
+/* ---------------- Big Button ----------------*/
 
 #contact-us {
     border: solid 2px white;
     border-radius: 100px;
 }
 #contact-us:hover {
-    animation: contact-us-fade 0.2s;
+    animation: white-fade 0.2s;
     color: black;
     background-color: white;
 }
 #contact-us:not(:hover) {
-    animation: contact-us-unfade 0.2s;
+    animation: white-unfade 0.2s;
 }
 
 /* ---------------- Arrow Down Button ----------------*/
@@ -237,6 +252,7 @@ span.arrow-drop-down {
 }
 
 #arrow-button {
+    animation: arrow-shift-up 0.3s ease-out;
     position: absolute;
     z-index: 1;
     margin-top: -90px;
@@ -249,9 +265,6 @@ span.arrow-drop-down {
 #arrow-button:hover a {
     animation: arrow-shift-down 0.3s ease-out;
     margin-top: 780px;
-}
-#arrow-button:not(:hover) a {
-    animation: arrow-shift-up 0.3s ease-out;
 }
 
 /* ---------------- Who We Are Text ----------------*/
@@ -288,12 +301,13 @@ span.arrow-drop-down {
     justify-content: space-around;
 }
 #team-sub {
+    animation: ambitions-dimmed 0.2s;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 260px;
-    padding-bottom: 15px;
+    padding: 15px 0 25px 0;
     border-radius: 35px;
 }
 #team-num {
@@ -303,12 +317,12 @@ span.arrow-drop-down {
 /* ---------------- Ambitions ----------------*/
 
 @keyframes ambitions-highlight {
-    0% {background-color: rgba(0, 0, 0, 0); scale: 1;}
-    100% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05;}
+    0% {background-color: rgba(0, 0, 0, 0); scale: 1; backdrop-filter: blur(0);}
+    100% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05; backdrop-filter: blur(10px);}
 }
 @keyframes ambitions-dimmed {
-    0% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05}
-    100% {background-color: rgb(0, 0, 0, 0); scale: 1;}
+    0% {background-color: rgba(255, 255, 255, 0.1); scale: 1.05; backdrop-filter: blur(10px);}
+    100% {background-color: rgb(0, 0, 0, 0); scale: 1; backdrop-filter: blur(0);}
 }
 
 span.ambitions-icon {
@@ -329,6 +343,8 @@ span.ambitions-icon {
 }
 
 #ambitions-sub {
+    animation: ambitions-dimmed 0.2s;
+
     align-items: center;
     width: 260px;
     padding: 10px;
@@ -349,10 +365,7 @@ span.ambitions-icon {
     animation: ambitions-highlight 0.2s;
     background-color: rgba(255, 255, 255, 0.1);
     scale: 1.05;
-}
-#ambitions-sub:not(:hover),
-#team-sub:not(:hover) {
-    animation: ambitions-dimmed 0.2s;
+    backdrop-filter: blur(10px);
 }
 
 /* ---------------- Interesting ----------------*/
@@ -363,39 +376,9 @@ span.ambitions-icon {
     border-radius: 45px 45px 0 0;
 }
 
-/* ---------------- Footer ----------------*/
-
-footer {
-    align-items: center;
-    display: flex;
-    justify-content: space-around;
-    padding: 50px;
-    background-color: rgb(199, 155, 18);
-    border-radius: 45px 45px 0 0;
-}
-#social {
-    width: 50px;
-}
-#social:hover {
-    animation: fade 0.2s;
-    opacity: 0.7;
-}
-#social:not(:hover) {
-    animation: unfade 0.2s;
-}
-
 /* ---------------------------------------*/
 /* ---------------- Leads ----------------*/
 /* ---------------------------------------*/
-
-@keyframes zoom {
-    0% {scale: 1}
-    100% {scale: 1.05}
-}
-@keyframes unzoom {
-    0% {scale: 1.05}
-    100% {scale: 1}
-}
 
 #lead-title {
     font-size: 40pt;
@@ -415,13 +398,11 @@ footer {
     height: 758px;
     border-radius: 30px;
     margin: 25px;
+    animation: unzoom 0.2s;
 }
 .card:hover {
     animation: zoom 0.2s;
     scale: 1.05;
-}
-.card:not(:hover) {
-    animation: unzoom 0.2s;
 }
 
 .profil-pic {
@@ -456,13 +437,11 @@ footer {
     height: 30px;
     width: 30px;
     margin-right: 10px;
+    animation: unfade 0.2s ease-out;
 }
 #contacts-icon:hover {
     animation: fade 0.2s;
     opacity: 0.7;
-}
-#contacts-icon:not(:hover) {
-    animation: unfade 0.2s ease-out;
 }
 
 /* ------------------------------------------*/
@@ -513,6 +492,7 @@ footer {
 }
 
 .project-pic {
+    animation: pic-unfade 0.2s;
     width: 350px;
     height: 525px;
     border-radius: 30px;
@@ -521,9 +501,6 @@ footer {
 .project-card:hover .project-pic{
     animation: pic-fade 0.2s;
     opacity: 0.1;
-}
-.project-card:not(:hover) .project-pic{
-    animation: pic-unfade 0.2s;
 }
 
 .project-name {
@@ -544,6 +521,7 @@ footer {
     z-index: 1;
 }
 #project-about {
+    animation: about-fade 0.2s;
     position: absolute;
     width: 330px;
     opacity: 0;
@@ -559,6 +537,7 @@ footer {
     z-index: 1;
 }
 #project-more {
+    animation: about-fade 0.2s;
     opacity: 0;
     margin-top: 461.5px;
 }
@@ -567,10 +546,6 @@ footer {
 .project-card:hover #project-more {
     animation: about-unfade 0.2s;
     opacity: 1;
-}
-.project-card:not(:hover) #project-about,
-.project-card:not(:hover) #project-more {
-    animation: about-fade 0.2s;
 }
 
 /* ------------------------------------------*/
@@ -591,16 +566,72 @@ footer {
 /* ---------------- Join Us ----------------*/
 /* -----------------------------------------*/
 
-.faq {
-    margin: 0 400px;
+.question {
+    width: 700px;
+    margin: 5px auto 5px auto;
 }
 
-.question {
-    backdrop-filter: blur(10px);
-    background-color: rgba(255, 255, 255, 0.1);
-    width: 700px;
-    margin: 5px;
+.question-title  {
+    padding : 30px;
+    cursor : pointer;
+    display: block;
+    background-color: rgb(255, 255, 255, 0.1);
 }
-.question-title {
-    padding: 10px;
+
+.qtt {border-radius: 40px 40px 5px 5px;}
+.qtm {border-radius: 5px 5px 5px 5px;}
+.qtb {border-radius: 5px 5px 40px 40px;}
+
+#q1, #q2, #q3, #q4, #q5, #q6 {
+    position: absolute;
+    opacity: 0;
+    height: 0;
+}
+.question-answer {
+    height: 0;
+    overflow: hidden;
+    transition: height 0.3s;
+}
+#q1:checked + .question-answer,
+#q2:checked + .question-answer,
+#q3:checked + .question-answer,
+#q4:checked + .question-answer,
+#q5:checked + .question-answer,
+#q6:checked + .question-answer {
+    height: 243px;
+}
+.question-answer-txt {
+    padding: 30px;
+    background-color: rgb(255, 255, 255, 0.1);
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+/* ----------------------------------------*/
+/* ---------------- Footer ----------------*/
+/* ----------------------------------------*/
+
+footer {
+    background-color: rgb(199, 155, 18);
+    border-radius: 45px 45px 0 0;
+    padding: 50px 50px 30px 50px;
+}
+.footer-content {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+}
+#social {
+    width: 50px;
+    animation: unfade 0.2s;
+}
+#social:hover {
+    animation: fade 0.2s;
+    opacity: 0.7;
+}
+.ocf {
+    font-size: 10pt;
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 }

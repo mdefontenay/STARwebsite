@@ -19,23 +19,37 @@
     <div id="menu-bar">
         <a href="index.html"><img src="assets/img/star_corner_logo.svg" id="star-corner-logo"></a>
         <div id="right-menu-bar">
-            <div id="subteams">
+            <div class="submenu">
                 <a href="subteams.html">Subteams</a>
             </div>
-            <div id="staff">
+            <div class="submenu">
                 <a href="leads.html">Leads</a>
             </div>
-            <div id="sponsors">
+            <div class="submenu">
                 <a href="sponsors.html">Sponsors</a>
             </div>
-            <div id="outreach">
+            <div class="submenu">
                 <a href="outreach.html">Outreach</a>
             </div>
             <a href="join_us.html">
-                <div id="contact-us">
+                <div id="contact-us" class="submenu">
                     Join Us
                 </div>
             </a>
+            
+            <input id="burger-checkbox" type="checkbox" />
+            <label class="burger-menu-btn" for="burger-checkbox">
+                <span></span>
+            </label>
+
+            <div class="burger-menu-content">
+                <a href="projects.html" class="burger-menu-items bm-top">Projects</a>
+                <a href="subteams.html" class="burger-menu-items">Subteams</a>
+                <a href="leads.html" class="burger-menu-items">Leads</a>
+                <a href="sponsors.html" class="burger-menu-items">Sponsors</a>
+                <a href="outreach.html" class="burger-menu-items">Outreach</a>
+                <a href="join_us.html" class="burger-menu-items bm-bottom">Join Us</a>
+            </div>
         </div>
     </div>
     
@@ -50,9 +64,13 @@
     </div>
     <img src="assets/img/cover.jpg" class="cover-img">
 
-    <div class="text-main-page">
+    <div class="text-main-page wide-main-page">
         <b>We are<br>
         UC Berkeley's Space Technology and Rocketry</b>
+    </div>
+    <div class="text-main-page small-main-page">
+        <b>We are<br>
+        UC Berkeley's STAR</b>
     </div>
 
     <div id="arrow-button">
@@ -83,7 +101,7 @@
         <a href="subteams.html">
             <div id="team-sub">
                 <span id="team-num"><b>10</b></span>
-                Completed Vehicles
+                Subteams
             </div>
         </a>
     </div>
@@ -93,23 +111,22 @@
         <div id="strong-text">
             <b>Our Ambitions</b>
         </div>
-        <br>
-        <div id="ambitions">
-            <div id="ambitions-sub">
-                <span class="material-symbols-outlined ambitions-icon">rocket</span>
-                <b>Competitions</b>
-                <br><span id="ambitions-about">Reaching new heights in national and international rocketry competitions</span>
-            </div>
-            <div id="ambitions-sub">
-                <span class="material-symbols-outlined ambitions-icon">handshake</span>
-                <b>Connections</b>
-                <br><span id="ambitions-about">Gaining industry-level experience and making lifelong friendships</span>
-            </div>
-            <div id="ambitions-sub">
-                <span class="material-symbols-outlined ambitions-icon">groups</span>
-                <b>Community</b>
-                <br><span id="ambitions-about">Educating local students and residents about aerospace technologies</span>
-            </div>
+    </div>
+    <div id="ambitions">
+        <div id="ambitions-sub">
+            <span class="material-symbols-outlined ambitions-icon">rocket</span>
+            <b>Competitions</b>
+            <br><span id="ambitions-about">Reaching new heights in national and international rocketry competitions</span>
+        </div>
+        <div id="ambitions-sub">
+            <span class="material-symbols-outlined ambitions-icon">handshake</span>
+            <b>Connections</b>
+            <br><span id="ambitions-about">Gaining industry-level experience and making lifelong friendships</span>
+        </div>
+        <div id="ambitions-sub">
+            <span class="material-symbols-outlined ambitions-icon">groups</span>
+            <b>Community</b>
+            <br><span id="ambitions-about">Educating local students and residents about aerospace technologies</span>
         </div>
     </div>
     <div id="interesting">
@@ -127,27 +144,23 @@
 
     <footer style="margin-top: -45px;">
         <div class="footer-content">
-            <div style="width: 456px">
-                <div>
-                    <a href="https://www.facebook.com/ucberkeleystar/" target="_blank"><img src="assets/img/icons/facebook.svg" id="social"></a>
-                    <a href="https://www.instagram.com/starberkeley/" target="_blank"><img src="assets/img/icons/instagram.svg" id="social"></a>
-                    <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA" target="_blank"><img src="assets/img/icons/youtube.svg" id="social"></a>
-                    <a href="https://www.linkedin.com/company/calstar" target="_blank"><img src="assets/img/icons/linkedin.svg" id="social"></a>
-                </div>
-                <div style="font-size: 10pt;">
-                    © 2023 by Space Technologies and Rocketry
-                </div>
+            <div id="footer-social">
+                <a href="https://www.facebook.com/ucberkeleystar/" target="_blank"><img src="assets/img/icons/facebook.svg" id="social"></a>
+                <a href="https://www.instagram.com/starberkeley/" target="_blank"><img src="assets/img/icons/instagram.svg" id="social"></a>
+                <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA" target="_blank"><img src="assets/img/icons/youtube.svg" id="social"></a>
+                <a href="https://www.linkedin.com/company/calstar" target="_blank"><img src="assets/img/icons/linkedin.svg" id="social"></a>
+                <br>© 2023 by Space Technologies and Rocketry
             </div>
             
-            <div style="width: 456px; text-align: center;">
+            <div id="footer-contact-us">
                 <a href="mailto:contact@stars.berkeley.edu?subject=">
-                    <div id="contact-us" style="font-size: 30pt; width: 220px;">
+                    <div id="contact-us" style="font-size: 20pt; width: 150px;">
                         Contact Us
                     </div>
                 </a>
             </div>
     
-            <div style="width: 456px; font-size: 10pt;">
+            <div id="footer-join-today">
                 <span style="font-size: 20pt;">Join Today!</span><br>
                 For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs .
             </div>

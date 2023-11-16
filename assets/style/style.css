@@ -40,31 +40,6 @@ tr:last-child {
     border-collapse: separate;
 }
 
-@keyframes fade {
-    0% {opacity: 1;}
-    100% {opacity: 0.7;}
-}
-@keyframes unfade {
-    0% {opacity: 0.7;}
-    100% {opacity: 1;}
-}
-@keyframes white-fade {
-    0% {color: white; background-color: transparent;}
-    100% {color: black; background-color: white;}
-}
-@keyframes white-unfade {
-    0% {color: black; background-color: white;}
-    100% {color: white;}
-}
-@keyframes zoom {
-    0% {scale: 1}
-    100% {scale: 1.05}
-}
-@keyframes unzoom {
-    0% {scale: 1.05}
-    100% {scale: 1}
-}
-
 /* ---------------- Cover ----------------*/
 
 .cover-img {
@@ -83,8 +58,7 @@ tr:last-child {
 }
 .text-main-page {
     position: absolute;
-    margin-top: -510px;
-    margin-left: -10px;
+    margin: -510px 0 0 -10px;
     width: 100%;
 
     text-align: right;
@@ -99,6 +73,10 @@ tr:last-child {
     font-size: 30pt;
     margin-top: -210px;
     z-index: 1;
+}
+.small-main-page {
+    margin: -495px 0 0 -10px;
+    display: none;
 }
 
 /* ---------------- Menu Bar ----------------*/
@@ -124,6 +102,7 @@ tr:last-child {
 
 #star-corner-logo {
     width: 160px;
+    transition-duration: 0.2s;
 }
 
 #right-menu-bar {
@@ -133,21 +112,13 @@ tr:last-child {
 
     font-size: 17pt;
 }
-#subteams, #staff, #sponsors, #outreach, #contact-us {
+.submenu, #contact-us {
     margin: auto;
     padding: 10px 15px 10px 15px;
+    transition-duration: 0.2s;
 }
-#outreach {
-    margin-right: 10px;
-}
-
-#star-corner-logo:hover, #subteams:hover, #staff:hover, #sponsors:hover, #outreach:hover {
-    animation: fade 0.2s;
+.submenu:hover, #star-corner-logo:hover {
     opacity: 0.7;
-}
-#star-corner-logo:not(:hover), #subteams:not(:hover), #staff:not(:hover), #sponsors:not(:hover), #outreach:not(:hover) {
-    animation: unfade 0.2s;
-    opacity: 1;
 }
 
 /* ---------------- Dropdown ----------------*/
@@ -169,13 +140,10 @@ span.arrow-drop-down {
 #dropdown-title {
     padding: 15px;
     width: 125px;
+    transition-duration: 0.2s;
 }
 #dropdown-title:hover {
-    animation: fade 0.2s;
     opacity: 0.7;
-}
-#dropdown-title:not(:hover) {
-    animation: unfade 0.2s ease-out;
 }
 
 /* ---------------- Dropdown Content ----------------*/
@@ -212,11 +180,10 @@ span.arrow-drop-down {
     display: none;
 }
 #dropdown-content a {
-    animation: white-unfade 0.2s;
     padding: 12px 16px;
+    transition-duration: 0.2s;
 }
 #dropdown-content a:hover {
-    animation: white-fade 0.2s;
     background-color: white;
     color: black;
 }
@@ -226,14 +193,11 @@ span.arrow-drop-down {
 #contact-us {
     border: solid 2px white;
     border-radius: 100px;
+    transition-duration: 0.2s;
 }
 #contact-us:hover {
-    animation: white-fade 0.2s;
     color: black;
     background-color: white;
-}
-#contact-us:not(:hover) {
-    animation: white-unfade 0.2s;
 }
 
 /* ---------------- Arrow Down Button ----------------*/
@@ -287,7 +251,6 @@ span.arrow-drop-down {
     height: 500px;
     object-fit: cover;
     opacity: 30%;
-    align-items: center;
     border-radius: 45px;
     margin-top: -504px;
     z-index: -1;
@@ -295,23 +258,30 @@ span.arrow-drop-down {
 #team-photo-text {
     height: 500px;
     align-items: center;
-    padding: 0 120px;
 
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 #team-sub {
     animation: ambitions-dimmed 0.2s;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     width: 260px;
     padding: 15px 0 25px 0;
     border-radius: 35px;
+    margin: 0 50px;
 }
 #team-num {
     font-size: 80pt;
+}
+
+@media (max-width: 1080px) {
+    #team-sub {
+        margin: 0 10px;
+    }
 }
 
 /* ---------------- Ambitions ----------------*/
@@ -339,7 +309,8 @@ span.ambitions-icon {
     align-items: center;
     margin: 0 70px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 
 #ambitions-sub {
@@ -350,6 +321,7 @@ span.ambitions-icon {
     padding: 10px;
     text-align: center;
     border-radius: 30px;
+    margin: 0 20px 30px 20px;
 
     display: flex;
     flex-direction: column;
@@ -398,10 +370,9 @@ span.ambitions-icon {
     height: 758px;
     border-radius: 30px;
     margin: 25px;
-    animation: unzoom 0.2s;
+    transition-duration: 0.2s;
 }
 .card:hover {
-    animation: zoom 0.2s;
     scale: 1.05;
 }
 
@@ -437,10 +408,9 @@ span.ambitions-icon {
     height: 30px;
     width: 30px;
     margin-right: 10px;
-    animation: unfade 0.2s ease-out;
+    transition-duration: 0.2s;
 }
 #contacts-icon:hover {
-    animation: fade 0.2s;
     opacity: 0.7;
 }
 
@@ -462,44 +432,23 @@ span.ambitions-icon {
 /* ---------------- Projects ----------------*/
 /* ------------------------------------------*/
 
-@keyframes pic-fade {
-    0% {opacity: 1;}
-    100% {opacity: 0.1;}
-}
-@keyframes pic-unfade {
-    0% {opacity: 0.1;}
-    100% {opacity: 1;}
-}
-@keyframes about-fade {
-    0% {opacity: 1;}
-    100% {opacity: 0;}
-}
-@keyframes about-unfade {
-    0% {opacity: 0;}
-    100% {opacity: 1;}
-}
-
 .project-card {
     margin: 25px;
     height: 525px;
+    transition-duration: 0.2s;
 }
 .project-card:hover {
-    animation: zoom 0.2s;
     scale: 1.05;
-}
-.project-card:not(:hover) {
-    animation: unzoom 0.2s;
 }
 
 .project-pic {
-    animation: pic-unfade 0.2s;
     width: 350px;
     height: 525px;
     border-radius: 30px;
     z-index: 0;
+    transition-duration: 0.2s;
 }
 .project-card:hover .project-pic{
-    animation: pic-fade 0.2s;
     opacity: 0.1;
 }
 
@@ -521,7 +470,6 @@ span.ambitions-icon {
     z-index: 1;
 }
 #project-about {
-    animation: about-fade 0.2s;
     position: absolute;
     width: 330px;
     opacity: 0;
@@ -535,16 +483,17 @@ span.ambitions-icon {
     text-align: center;
     
     z-index: 1;
+    transition-duration: 0.2s;
 }
 #project-more {
     animation: about-fade 0.2s;
     opacity: 0;
     margin-top: 461.5px;
+    transition-duration: 0.2s;
 }
 
 .project-card:hover #project-about,
 .project-card:hover #project-more {
-    animation: about-unfade 0.2s;
     opacity: 1;
 }
 
@@ -623,10 +572,9 @@ footer {
 }
 #social {
     width: 50px;
-    animation: unfade 0.2s;
+    transition-duration: 0.2s;
 }
 #social:hover {
-    animation: fade 0.2s;
     opacity: 0.7;
 }
 .ocf {
@@ -634,4 +582,177 @@ footer {
     margin-top: 30px;
     display: flex;
     justify-content: center;
+}
+
+#footer-social {
+    width: 456px;
+    font-size: 10pt;
+    text-align: center;
+}
+#footer-contact-us {
+    width: 456px;
+    text-align: center;
+}
+#footer-join-today {
+    width: 456px;
+    font-size: 10pt;
+}
+
+/* ---------------- @Media ----------------*/
+
+@media (max-width: 504px) {
+    .paragraph {
+        padding: 40px 50px;
+    }
+    #strong-text {
+        font-size: 30pt;
+    }
+}
+@media (max-width: 990px){
+    .submenu {
+        display: none;
+    }
+    #dropdown {
+        display: none;
+    }
+    .burger-menu-btn {
+        display: block;
+    }
+    .burger-menu-content {
+        display: flex;
+    }
+    .wide-main-page {
+        display: none;
+    }
+    .small-main-page {
+        display: block;
+    }
+}
+@media (max-width: 559px) {
+    #team-photo {
+        height: 700px;
+        margin-top: -695px;
+    }
+    #team-sub {
+        margin-top: 10px
+    }
+    #team-photo-text {
+        height: 700px;
+    }
+}
+
+@media (max-width: 990px) and (min-width: 505px) {
+    .paragraph {
+        padding: 40px 100px;
+    }
+}
+@media (min-width: 991px) {
+    #burger-checkbox {
+        display: none;
+    }
+    .burger-menu-btn {
+        display: none;
+    }
+    .burger-menu-content {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #footer-social {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    #footer-contact-us {
+        margin-bottom: 20px;
+        width: 300px;
+    }
+    #footer-join-today {
+        text-align: center;
+        width: 300px;
+    }
+    .ocf {
+        text-align: center;
+        flex-direction: column;
+    }
+}
+
+/* ---------------- Burger Menu ----------------*/
+
+#burger-checkbox {
+    opacity: 0;
+}
+#burger-checkbox:checked + .burger-menu-btn span {
+    transform: rotate(45deg);
+}
+#burger-checkbox:checked + .burger-menu-btn span::before {
+    top: 0;
+    transform: rotate(0deg);
+}
+#burger-checkbox:checked + .burger-menu-btn span::after {
+    top: 0;
+    transform: rotate(90deg);
+}
+#burger-checkbox:checked ~ .burger-menu-content {
+    margin: 58px 100px 0 0;
+    opacity: 1;
+}
+
+.burger-menu-btn {
+    position: fixed;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    margin: 7px 40px 0 0
+}
+.burger-menu-btn span,
+.burger-menu-btn span::before,
+.burger-menu-btn span::after {
+    position: absolute;
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    transition-duration: 0.2s;
+    border-radius: 10px;
+}
+.burger-menu-btn span::before {
+    content: '';
+    top: -11px;
+}
+.burger-menu-btn span::after {
+    content: '';
+    top: 11px;
+}
+
+.burger-menu-content {
+    position: absolute;
+    margin: 58px -220px 0 0;
+    opacity: 0;
+    list-style: none;
+    transition-duration: 0.2s;
+    backdrop-filter: blur(10px);
+
+    background-color: rgb(6, 14, 26, 0.1);
+    
+    flex-direction: column;
+    border-radius: 20px;
+}
+.burger-menu-items {
+    font-size: 20px;
+    padding: 12px 25px 12px 16px;
+    font-size: 17pt;
+    transition-duration: 0.2s;
+}
+.burger-menu-items:hover {
+    background-color: white;
+    color: black;
+}
+.bm-top {
+    border-radius: 20px 20px 0 0;
+}
+.bm-bottom {
+    border-radius: 0 0 20px 20px ;
 }

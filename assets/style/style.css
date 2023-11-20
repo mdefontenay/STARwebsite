@@ -45,6 +45,29 @@ button {
     font-weight: 100;
 }
 
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 25px;
+}
+.card {
+    margin: 25px;
+    border-radius: 30px;
+    width: 350px;
+    transition-duration: 0.2s;
+}
+.card:hover {
+    scale: 1.05;
+    box-shadow: 0 0 20px rgb(0, 0, 0, 0.5);;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+}
+
+/* ---------------------------------------*/
+/* ---------------- Main -----------------*/
+/* ---------------------------------------*/
+
 /* ---------------- Cover ----------------*/
 
 .cover-img {
@@ -93,6 +116,7 @@ button {
     height: 80px;
     background-color: rgb(6, 14, 26, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 2;
 }
 nav {
@@ -120,7 +144,9 @@ nav {
     height: 27px;
     transition-duration: 0.2s;
 }
-.submenu:hover, .dropdown-title:hover, #star-corner-logo:hover {
+.submenu:hover,
+.dropdown-title:hover,
+#star-corner-logo:hover {
     opacity: 0.7;
 }
 
@@ -167,6 +193,7 @@ nav {
     border-radius: 20px;
     background-color: rgb(6, 14, 26, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     opacity: 0;
 }
 .dropdown-content a {
@@ -302,9 +329,7 @@ nav {
 
 #ambitions-sub:hover,
 #team-sub:hover {
-    scale: 1.05;
     background-color: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
 }
 
 /* ---------------- Interesting ----------------*/
@@ -318,24 +343,10 @@ nav {
 /* ---------------- Leads ----------------*/
 /* ---------------------------------------*/
 
-.card-list {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 25px;
-}
-.card {
-    margin: 25px;
-    border-radius: 30px;
-    width: 350px;
+#leads-card {
     height: 758px;
     background-color: rgb(33, 39, 48);
-    transition-duration: 0.2s;
 }
-.card:hover {
-    scale: 1.05;
-}
-
 .profil-pic {
     border-radius: 30px;
     width: 350px;
@@ -390,13 +401,9 @@ nav {
 /* ---------------- Projects ----------------*/
 /* ------------------------------------------*/
 
-.project-card {
-    margin: 25px;
+#project-card {
     height: 525px;
-    transition-duration: 0.2s;
-}
-.project-card:hover {
-    scale: 1.05;
+    background-color: transparent;
 }
 
 .project-pic {
@@ -406,7 +413,7 @@ nav {
     z-index: 0;
     transition-duration: 0.2s;
 }
-.project-card:hover .project-pic{
+#project-card:hover .project-pic{
     opacity: 0.1;
 }
 
@@ -421,6 +428,7 @@ nav {
     font-size: 20pt;
     background-color: rgb(6, 14, 26, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 1;
 }
 #project-about {
@@ -442,8 +450,8 @@ nav {
     transition-duration: 0.2s;
 }
 
-.project-card:hover #project-about,
-.project-card:hover #project-more {
+#project-card:hover #project-about,
+#project-card:hover #project-more {
     opacity: 1;
 }
 
@@ -451,22 +459,6 @@ nav {
 /* ---------------- Sponsors ----------------*/
 /* ------------------------------------------*/
 
-.sponsor-logo {
-    border-radius: 30px;
-    width: 250px;
-    background-color: white;
-}
-#sponsor-card {
-    width: 250px;
-    height: 250px;
-}
-.sponsor-packet {
-    text-align: center;
-    margin: -57.5px 0 20px 0;
-    background-color: rgb(33, 39, 48);
-    border-radius: 0 0 45px 45px;
-    padding: 70px 300px 10px 300px;
-}
 .packet-button {
     display: flex;
     flex-direction: column;
@@ -485,6 +477,23 @@ nav {
 .packet:hover {
     color: black;
     background-color: white;
+}
+
+.sponsor-logo {
+    border-radius: 30px;
+    width: 250px;
+    background-color: white;
+}
+#sponsor-card {
+    width: 250px;
+    height: 250px;
+}
+.sponsor-packet {
+    text-align: center;
+    margin: -57.5px 0 20px 0;
+    background-color: rgb(33, 39, 48);
+    border-radius: 0 0 45px 45px;
+    padding: 70px 300px 10px 300px;
 }
 
 /* -----------------------------------------*/
@@ -604,28 +613,6 @@ footer {
     position: fixed;
     opacity: 0;
 }
-#menu-checkbox:checked + .menu-button > span {
-    top: 38px;
-    transform: rotate(45deg);
-}
-#menu-checkbox:checked + .menu-button > span::before {
-    top: 0px;
-    transform: rotate(0deg);
-}
-#menu-checkbox:checked + .menu-button > span::after {
-    top: 0;
-    transform: rotate(90deg);
-}
-#menu-checkbox:checked ~ .menu-content {
-    animation: menu-drop-unfade 0.2s;
-    display: flex;
-    margin: 75px 21px;
-    opacity: 1;
-}
-#menu-checkbox:not(:checked) ~ .menu-content {
-    animation: menu-drop-fade 0.2s;
-}
-
 .menu-button {
     margin: 4px 10px;
     width: 43px;
@@ -644,18 +631,22 @@ footer {
     background-color: white;
     transition-duration: 0.2s;
 }
-.menu-button span {
-    top: 27px;
-    right: 32px;
-    content: '';
+.menu-button span {top: 27px; right: 32px; content: '';}
+.menu-button span::before {top: 11px; content: '';}
+.menu-button span::after {top: 22px; content: '';}
+
+#menu-checkbox:checked + .menu-button > span {top: 38px; transform: rotate(45deg);}
+#menu-checkbox:checked + .menu-button > span::before {top: 0px; transform: rotate(0deg);}
+#menu-checkbox:checked + .menu-button > span::after {top: 0; transform: rotate(90deg);}
+
+#menu-checkbox:checked ~ .menu-content {
+    animation: menu-drop-unfade 0.2s;
+    display: flex;
+    margin: 75px 21px;
+    opacity: 1;
 }
-.menu-button span::before {
-    top: 11px;
-    content: '';
-}
-.menu-button span::after {
-    top: 22px;
-    content: '';
+#menu-checkbox:not(:checked) ~ .menu-content {
+    animation: menu-drop-fade 0.2s;
 }
 
 .menu-content {
@@ -668,6 +659,7 @@ footer {
     width: calc(100% - 95px);
     background-color: rgb(6, 14, 26, 0.1);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     opacity: 0;
     z-index: 2;
     transition-duration: 0.2s;
@@ -688,78 +680,37 @@ footer {
 /* ---------------- @Media --------------- */
 /* ----------------------------------------*/
 
-@media (max-width: 950px){
-    .right-menu-bar {
-        display: none;
-    }
-    .wide-main-page {
-        display: none;
-    }
-    .small-main-page {
-        display: block;
-    }
+@media (max-width: 950px) {
+    .right-menu-bar {display: none;}
+    .wide-main-page {display: none;}
+    .small-main-page {display: block;}
+    .cover-img {height: calc(100vh - 50px);}
 }
 
 @media (max-width: 559px) {
-    #team-photo {
-        margin-top: -695px;
-        height: 700px;
-    }
-    #team-sub {
-        margin-top: 10px
-    }
-    #team-photo-text {
-        height: 700px;
-    }
+    #team-photo {margin-top: -695px; height: 700px;}
+    #team-sub {margin-top: 10px}
+    #team-photo-text {height: 700px;}
 }
 
 @media (max-width: 950px) and (min-width: 505px) {
-    .paragraph {
-        padding: 40px 100px;
-    }
-    .sponsor-packet {
-        padding: 70px 100px 10px 100px;
-    }
+    .paragraph {padding: 40px 100px;}
+    .sponsor-packet {padding: 70px 100px 10px 100px;}
 }
 @media (max-width: 504px) {
-    .paragraph {
-        padding: 40px 50px;
-    }
-    #strong-text {
-        font-size: 30pt;
-    }
-    .sponsor-packet {
-        padding: 70px 50px 10px 50px;
-    }
+    .paragraph {padding: 40px 50px;}
+    #strong-text {font-size: 30pt;}
+    .sponsor-packet {padding: 70px 50px 10px 50px;}
 }
 
 @media (min-width: 951px) {
-    .menu-button {
-        display: none;
-    }
-    .menu-content {
-        display: none;
-    }
+    .menu-button {display: none;}
+    .menu-content {display: none;}
 }
 @media (max-width: 750px) {
-    .footer-content {
-        flex-direction: column;
-        justify-content: center;
-    }
-    #footer-social {
-        margin-bottom: 40px;
-        width: 300px;
-    }
-    #footer-contact-us {
-        margin-bottom: 40px;
-        width: 300px;
-    }
-    #footer-join-today {
-        text-align: center;
-        width: 300px;
-    }
-    .ocf {
-        flex-direction: column;
-        text-align: center;
-    }
+    .footer-content {flex-direction: column; justify-content: center;}
+    #footer-social {margin-bottom: 40px; width: 300px;}
+    #footer-contact-us {margin-bottom: 40px; width: 300px;}
+    #footer-join-today {text-align: center; width: 300px;}
+    .ocf {flex-direction: column; text-align: center;}
 }

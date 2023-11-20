@@ -12,7 +12,6 @@ body {
     background-color: rgb(6, 14, 26);
     align-items: center;
 }
-
 a {
     text-decoration: none;
     color: white;
@@ -96,7 +95,7 @@ button {
     backdrop-filter: blur(10px);
     z-index: 2;
 }
-.menu-bar {
+nav {
     position: fixed;
     padding: 15px;
     justify-content: space-between;
@@ -220,6 +219,11 @@ button {
     text-align: center;
     font-size: 40pt;
 }
+#sub-text {
+    text-align: center;
+    font-size: 25pt;
+    margin-bottom: 20px;
+}
 
 .paragraph {
     padding: 40px 200px 40px 200px;
@@ -313,12 +317,6 @@ button {
 /* ---------------------------------------*/
 /* ---------------- Leads ----------------*/
 /* ---------------------------------------*/
-
-#lead-title {
-    text-align: center;
-    margin: 25px 0;
-    font-size: 40pt;
-}
 
 .card-list {
     display: flex;
@@ -462,6 +460,32 @@ button {
     width: 250px;
     height: 250px;
 }
+.sponsor-packet {
+    text-align: center;
+    margin: -57.5px 0 20px 0;
+    background-color: rgb(33, 39, 48);
+    border-radius: 0 0 45px 45px;
+    padding: 70px 300px 10px 300px;
+}
+.packet-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 20px;
+}
+.packet {
+    padding: 10px 15px;
+    margin: 20px 0 0 0;
+    border: solid 2px white;
+    border-radius: 100px;
+    width: 200px;
+    transition-duration: 0.2s;
+}
+.packet:hover {
+    color: black;
+    background-color: white;
+}
 
 /* -----------------------------------------*/
 /* ---------------- Join Us ----------------*/
@@ -563,78 +587,6 @@ footer {
     font-size: 10pt;
 }
 
-/* ---------------- @Media ----------------*/
-
-@media (max-width: 950px){
-    .right-menu-bar {
-        display: none;
-    }
-    .wide-main-page {
-        display: none;
-    }
-    .small-main-page {
-        display: block;
-    }
-}
-
-@media (max-width: 559px) {
-    #team-photo {
-        margin-top: -695px;
-        height: 700px;
-    }
-    #team-sub {
-        margin-top: 10px
-    }
-    #team-photo-text {
-        height: 700px;
-    }
-}
-
-@media (max-width: 950px) and (min-width: 505px) {
-    .paragraph {
-        padding: 40px 100px;
-    }
-}
-@media (max-width: 504px) {
-    .paragraph {
-        padding: 40px 50px;
-    }
-    #strong-text {
-        font-size: 30pt;
-    }
-}
-
-@media (min-width: 951px) {
-    #menu-button {
-        display: none;
-    }
-    .menu-button {
-        display: none;
-    }
-}
-@media (max-width: 750px) {
-    .footer-content {
-        flex-direction: column;
-        justify-content: center;
-    }
-    #footer-social {
-        margin-bottom: 40px;
-        width: 300px;
-    }
-    #footer-contact-us {
-        margin-bottom: 40px;
-        width: 300px;
-    }
-    #footer-join-today {
-        text-align: center;
-        width: 300px;
-    }
-    .ocf {
-        flex-direction: column;
-        text-align: center;
-    }
-}
-
 /* ----------------------------------------*/
 /* ------------- Burger Menu ------------- */
 /* ----------------------------------------*/
@@ -653,7 +605,7 @@ footer {
     opacity: 0;
 }
 #menu-checkbox:checked + .menu-button > span {
-    top: 39px;
+    top: 38px;
     transform: rotate(45deg);
 }
 #menu-checkbox:checked + .menu-button > span::before {
@@ -730,4 +682,84 @@ footer {
 .menu-item:hover {
     color: black;
     background-color: white;
+}
+
+/* ----------------------------------------*/
+/* ---------------- @Media --------------- */
+/* ----------------------------------------*/
+
+@media (max-width: 950px){
+    .right-menu-bar {
+        display: none;
+    }
+    .wide-main-page {
+        display: none;
+    }
+    .small-main-page {
+        display: block;
+    }
+}
+
+@media (max-width: 559px) {
+    #team-photo {
+        margin-top: -695px;
+        height: 700px;
+    }
+    #team-sub {
+        margin-top: 10px
+    }
+    #team-photo-text {
+        height: 700px;
+    }
+}
+
+@media (max-width: 950px) and (min-width: 505px) {
+    .paragraph {
+        padding: 40px 100px;
+    }
+    .sponsor-packet {
+        padding: 70px 100px 10px 100px;
+    }
+}
+@media (max-width: 504px) {
+    .paragraph {
+        padding: 40px 50px;
+    }
+    #strong-text {
+        font-size: 30pt;
+    }
+    .sponsor-packet {
+        padding: 70px 50px 10px 50px;
+    }
+}
+
+@media (min-width: 951px) {
+    .menu-button {
+        display: none;
+    }
+    .menu-content {
+        display: none;
+    }
+}
+@media (max-width: 750px) {
+    .footer-content {
+        flex-direction: column;
+        justify-content: center;
+    }
+    #footer-social {
+        margin-bottom: 40px;
+        width: 300px;
+    }
+    #footer-contact-us {
+        margin-bottom: 40px;
+        width: 300px;
+    }
+    #footer-join-today {
+        text-align: center;
+        width: 300px;
+    }
+    .ocf {
+        flex-direction: column;
+        text-align: center;
+    }
 }

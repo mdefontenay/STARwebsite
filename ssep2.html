@@ -6,42 +6,73 @@
     <title>STAR - SSEP2</title>
 
     <link rel="stylesheet" href="assets/style/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300&family=Fahkwang:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 <body>
-    <div id="menu-bar">
-        <a href="index.html"><img src="assets/img/star_corner_logo.svg" alt="" id="star-corner-logo"></a>
-        <div id="right-menu-bar">
-            <div id="subteams">
-                <a href="subteams.html">Subteams</a>
+    <div class="blur-menu-bar"></div>
+    <div class="menu-bar">
+        <a href="index.html"><img src="assets/img/star_corner_logo.svg" id="star-corner-logo"></a>
+        <div class="right-menu-bar">
+            <div class="dropdown">
+                <a href="projects.html" class="dropdown-title">
+                    Projects &#9662;
+                </a>
+                <div class="dropdown-content">
+                    <a href="ssep2.html" id="top-drop">SSEP2</a>
+                    <a href="alula.html" id="bottom-drop">ALULA</a>
+                </div>
             </div>
-            <div id="staff">
-                <a href="leads.html">Leads</a>
-            </div>
-            <div id="sponsors">
-                <a href="sponsors.html">Sponsors</a>
-            </div>
-            <div id="outreach">
-                <a href="outreach.html">Outreach</a>
-            </div>
-            <div id="contact-us">
-                <a href="mailto:contact@stars.berkeley.edu?subject=">Contact Us</a>
-            </div>
+            <a href="subteams.html" class="submenu"> Subteams </a>
+            <a href="subteams.html" class="submenu"> Leads    </a>
+            <a href="subteams.html" class="submenu"> Sponsors </a>
+            <a href="subteams.html" class="submenu"> Outreach </a>
+            <a href="join_us.html"  class="join-us"> Join Us  </a>
+        </div>
+        <input id="menu-checkbox" type="checkbox" />
+        <label class="menu-button" for="menu-checkbox">
+            <span></span>
+        </label>
+
+        <div class="menu-content">
+            <a class="menu-item" href="projects.html">Projects</a>
+            <a class="menu-item" href="subteams.html">Subteams</a>
+            <a class="menu-item" href="leads.html">Leads</a>
+            <a class="menu-item" href="sponsors.html">Sponsors</a>
+            <a class="menu-item" href="outreach.html">Outreach</a>
+            <a class="menu-item" href="join_us.html">Join Us</a>
         </div>
     </div>
-    <div id="dropdown">
-        <div id="dropdown-title">
-            <a href="projects.html">Projects<span class="material-symbols-outlined arrow-drop-down">arrow_drop_down</span></a>
-        </div>
-        <div id="dropdown-content">
-            <a href="ssep2.html" id="ssep2-drop">SSEP2</a>
-            <a href="alula.html" id="alula-drop">ALULA</a>
-        </div>
-    </div>
+
     <img src="assets/img/cover.jpg" class="cover-img" id="small-cover-img">
+
+    <div class="small-text-main-page">
+        <b>Caldera</b>
+    </div>
+
+    <footer style="margin-top: 500px;">
+        <div class="footer-content">
+            <div id="footer-social">
+                <a href="https://www.facebook.com/ucberkeleystar/" target="_blank"><img src="assets/img/icons/facebook.svg" id="social"></a>
+                <a href="https://www.instagram.com/starberkeley/" target="_blank"><img src="assets/img/icons/instagram.svg" id="social"></a>
+                <a href="https://www.youtube.com/channel/UC-ceqnZp3XVz5mH8297izJA" target="_blank"><img src="assets/img/icons/youtube.svg" id="social"></a>
+                <a href="https://www.linkedin.com/company/calstar" target="_blank"><img src="assets/img/icons/linkedin.svg" id="social"></a>
+                <br>© 2023 by Space Technologies and Rocketry
+            </div>
+            
+            <div id="footer-contact-us">
+                <a href="mailto:contact@stars.berkeley.edu?subject=" class="contact-us" style="font-size: 20pt; width: 150px;">
+                    Contact Us
+                </a>
+            </div>
+    
+            <div id="footer-join-today">
+                <span style="font-size: 20pt;">Join Today!</span><br>
+                For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs.
+            </div>
+        </div>
+        <div class="ocf">
+            <a href="https://www.ocf.berkeley.edu/" target="_blank"><img src="assets/img/icons/ocf-hosted-penguin-dark.svg" style="width: 70px;"></a>
+            <span style="margin: auto 0 auto 10px">We are a student group acting independently of the University of California. We take full responsibility for our organization and this website.</span>
+        </div>
+    </footer>
 </body>
 </html>

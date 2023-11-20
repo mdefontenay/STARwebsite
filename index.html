@@ -7,61 +7,42 @@
     <title>STAR</title>
 
     <link rel="stylesheet" href="assets/style/style.css">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@100;300&family=Fahkwang:ital,wght@0,400;1,300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-
-    <script src="assets/script/script.js"></script>
 </head>
-<body class="preload">
-    <div id="menu-bar">
+<body>
+    <div class="blur-menu-bar"></div>
+    <div class="menu-bar">
         <a href="index.html"><img src="assets/img/star_corner_logo.svg" id="star-corner-logo"></a>
-        <div id="right-menu-bar">
-            <div class="submenu">
-                <a href="subteams.html">Subteams</a>
-            </div>
-            <div class="submenu">
-                <a href="leads.html">Leads</a>
-            </div>
-            <div class="submenu">
-                <a href="sponsors.html">Sponsors</a>
-            </div>
-            <div class="submenu">
-                <a href="outreach.html">Outreach</a>
-            </div>
-            <a href="join_us.html">
-                <div id="contact-us" class="submenu">
-                    Join Us
+        <div class="right-menu-bar">
+            <div class="dropdown">
+                <a href="projects.html" class="dropdown-title">
+                    Projects &#9662;
+                </a>
+                <div class="dropdown-content">
+                    <a href="ssep2.html" id="top-drop">SSEP2</a>
+                    <a href="alula.html" id="bottom-drop">ALULA</a>
                 </div>
-            </a>
-            
-            <input id="burger-checkbox" type="checkbox" />
-            <label class="burger-menu-btn" for="burger-checkbox">
-                <span></span>
-            </label>
-
-            <div class="burger-menu-content">
-                <a href="projects.html" class="burger-menu-items bm-top">Projects</a>
-                <a href="subteams.html" class="burger-menu-items">Subteams</a>
-                <a href="leads.html" class="burger-menu-items">Leads</a>
-                <a href="sponsors.html" class="burger-menu-items">Sponsors</a>
-                <a href="outreach.html" class="burger-menu-items">Outreach</a>
-                <a href="join_us.html" class="burger-menu-items bm-bottom">Join Us</a>
             </div>
+            <a href="subteams.html" class="submenu"> Subteams </a>
+            <a href="subteams.html" class="submenu"> Leads    </a>
+            <a href="subteams.html" class="submenu"> Sponsors </a>
+            <a href="subteams.html" class="submenu"> Outreach </a>
+            <a href="join_us.html"  class="join-us"> Join Us  </a>
+        </div>
+        <input id="menu-checkbox" type="checkbox" />
+        <label class="menu-button" for="menu-checkbox">
+            <span></span>
+        </label>
+
+        <div class="menu-content">
+            <a class="menu-item" href="projects.html">Projects</a>
+            <a class="menu-item" href="subteams.html">Subteams</a>
+            <a class="menu-item" href="leads.html">Leads</a>
+            <a class="menu-item" href="sponsors.html">Sponsors</a>
+            <a class="menu-item" href="outreach.html">Outreach</a>
+            <a class="menu-item" href="join_us.html">Join Us</a>
         </div>
     </div>
-    
-    <div id="dropdown">
-        <div id="dropdown-title">
-            <a href="projects.html">Projects<span class="material-symbols-outlined arrow-drop-down">arrow_drop_down</span></a>
-        </div>
-        <div id="dropdown-content">
-            <a href="ssep2.html" id="ssep2-drop">SSEP2</a>
-            <a href="alula.html" id="alula-drop">ALULA</a>
-        </div>
-    </div>
+
     <img src="assets/img/cover.jpg" class="cover-img">
 
     <div class="text-main-page wide-main-page">
@@ -73,8 +54,10 @@
         UC Berkeley's STAR</b>
     </div>
 
-    <div id="arrow-button">
-        <a href="#arrow-down"><img src="assets/img/arrow_down.svg" id="arrow-down"></a>
+    <div class="arrow-button">
+        <a href="#arrow-down">
+            <img src="assets/img/arrow_down.svg" id="arrow-down">
+        </a>
     </div>
 
     <div class="paragraph">
@@ -112,34 +95,32 @@
             <b>Our Ambitions</b>
         </div>
     </div>
-    <div id="ambitions">
+    <div class="ambitions">
         <div id="ambitions-sub">
-            <span class="material-symbols-outlined ambitions-icon">rocket</span>
+            <img src="assets/img/icons/rocket.svg" id="ambitions-icon">
             <b>Competitions</b>
             <br><span id="ambitions-about">Reaching new heights in national and international rocketry competitions</span>
         </div>
         <div id="ambitions-sub">
-            <span class="material-symbols-outlined ambitions-icon">handshake</span>
+            <img src="assets/img/icons/handshake.svg" id="ambitions-icon">
             <b>Connections</b>
             <br><span id="ambitions-about">Gaining industry-level experience and making lifelong friendships</span>
         </div>
         <div id="ambitions-sub">
-            <span class="material-symbols-outlined ambitions-icon">groups</span>
+            <img src="assets/img/icons/groups.svg" id="ambitions-icon">
             <b>Community</b>
             <br><span id="ambitions-about">Educating local students and residents about aerospace technologies</span>
         </div>
     </div>
-    <div id="interesting">
-        <div class="paragraph">
-            <div id="strong-text">
-                <b>Sounds Interesting?</b>
-            </div>
-            <br>What makes STAR special is that we are a very education-focused team, and new members do not need any prior experience at all -- we teach them everything they need to know! We pair all new members with a mentor and have them complete an intro project which will teach them everything they need to know to become a fully functional member of our team.
-        
-            <br><br>We have a variety of sub-teams available to our members like airframe, avionics, propulsion, payload, recovery, operations, systems, business, outreach, and media. We welcome all majors and backgrounds!
-        
-            <br><br>Regular recruitment season begins at the start of Fall semester, though if you are super passionate please contact the lead of the team you are interested in to enquirement further information (Found under Teams > Specialty Leads)
+    <div class="paragraph interesting">
+        <div id="strong-text">
+            <b>Sounds Interesting?</b>
         </div>
+        <br>What makes STAR special is that we are a very education-focused team, and new members do not need any prior experience at all -- we teach them everything they need to know! We pair all new members with a mentor and have them complete an intro project which will teach them everything they need to know to become a fully functional member of our team.
+    
+        <br><br>We have a variety of sub-teams available to our members like airframe, avionics, propulsion, payload, recovery, operations, systems, business, outreach, and media. We welcome all majors and backgrounds!
+    
+        <br><br>Regular recruitment season begins at the start of Fall semester, though if you are super passionate please contact the lead of the team you are interested in to enquirement further information (Found under Teams > Specialty Leads)<br><br>
     </div>
 
     <footer style="margin-top: -45px;">
@@ -153,16 +134,14 @@
             </div>
             
             <div id="footer-contact-us">
-                <a href="mailto:contact@stars.berkeley.edu?subject=">
-                    <div id="contact-us" style="font-size: 20pt; width: 150px;">
-                        Contact Us
-                    </div>
+                <a href="mailto:contact@stars.berkeley.edu?subject=" id="contact-us" style="font-size: 20pt; width: 150px;">
+                    Contact Us
                 </a>
             </div>
     
             <div id="footer-join-today">
                 <span style="font-size: 20pt;">Join Today!</span><br>
-                For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs .
+                For more information about what STAR is and who we are, check us out at <u><a href="rocketry.gitbook.io">rocketry.gitbook.io</a></u>, and come out to our infosessions at the beginning of each semester! Also, feel free to reach out to any of our team members here and check out the FAQs.
             </div>
         </div>
         <div class="ocf">

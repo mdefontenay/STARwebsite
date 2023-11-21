@@ -27,7 +27,10 @@ b {
 h1 {
     text-align: center;
     font-size: 40pt;
-    margin: 10px 0;
+    margin: 0 0 10px 0;
+}
+.title {
+    margin: 15px 0 20px 0;
 }
 
 table {
@@ -61,6 +64,7 @@ button {
     margin: 25px;
     border-radius: 30px;
     width: 350px;
+    font-size: 10pt;
     transition-duration: 0.2s;
 }
 .card:hover {
@@ -255,7 +259,7 @@ nav {
 }
 
 .paragraph {
-    padding: 40px 200px 40px 200px;
+    padding: 30px 200px 40px 200px;
     border-radius: 45px 45px 0 0;
 }
 
@@ -341,64 +345,6 @@ nav {
     background-color: rgb(33, 39, 48);
 }
 
-/* ---------------------------------------*/
-/* ---------------- Leads ----------------*/
-/* ---------------------------------------*/
-
-#leads-card {
-    height: 758px;
-    background-color: rgb(33, 39, 48);
-}
-.profil-pic {
-    border-radius: 30px;
-    width: 350px;
-}
-.card-text {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    padding: 20px;
-    font-size: 10pt;
-    height: 363px;
-}
-#name {
-    font-weight: bolder;
-    margin: 7px 0;
-    font-size: 14pt;
-}
-#position-major {
-    margin: 7px 0;
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 11pt;
-}
-#bio {
-    margin: 15px 0;
-}
-.contacts {
-    height: 30px;
-}
-#contacts-icon {
-    margin-right: 10px;
-    width: 30px;
-    height: 30px;
-    transition-duration: 0.2s;
-}
-#contacts-icon:hover {
-    opacity: 0.7;
-}
-
-/* ------------------------------------------*/
-/* ---------------- Outreach ----------------*/
-/* ------------------------------------------*/
-
-.the-problem {
-    background-color: rgb(21, 26, 37);
-}
-.the-solution {
-    margin-top: -45px;
-    background-color: rgb(33, 39, 48);
-}
-
 /* ------------------------------------------*/
 /* ---------------- Projects ----------------*/
 /* ------------------------------------------*/
@@ -457,6 +403,88 @@ nav {
     opacity: 1;
 }
 
+/* ---------------------------------------*/
+/* --------------- Subteams --------------*/
+/* ---------------------------------------*/
+
+#subteam-card {
+    background-color: rgb(33, 39, 48);
+    display: flex;
+    height: 200px;
+    width: 900px;
+    margin: 15px 0;
+}
+.subteam-img {
+    object-fit: cover;
+    width: 200px;
+    height: 100%;
+    border-radius: 30px;
+}
+.subteam-description {
+    display: flex;
+    flex-direction: column;
+    padding: 20px 30px;
+    width: 800px;
+}
+#sub-name {
+    font-weight: bolder;
+    margin: 5px 0;
+    font-size: 14pt;
+}
+#sub-lead {
+    margin: 5px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11pt;
+}
+#sub-des {
+    margin: 5px 0;
+}
+
+/* ---------------------------------------*/
+/* ---------------- Leads ----------------*/
+/* ---------------------------------------*/
+
+#leads-card {
+    height: 758px;
+    background-color: rgb(33, 39, 48);
+}
+.profil-pic {
+    border-radius: 30px;
+    width: 350px;
+}
+.card-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 20px;
+    height: 363px;
+}
+#name {
+    font-weight: bolder;
+    margin: 7px 0;
+    font-size: 14pt;
+}
+#position-major {
+    margin: 7px 0;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 11pt;
+}
+#bio {
+    margin: 15px 0;
+}
+.contacts {
+    height: 30px;
+}
+#contacts-icon {
+    margin-right: 10px;
+    width: 30px;
+    height: 30px;
+    transition-duration: 0.2s;
+}
+#contacts-icon:hover {
+    opacity: 0.7;
+}
+
 /* ------------------------------------------*/
 /* ---------------- Sponsors ----------------*/
 /* ------------------------------------------*/
@@ -498,6 +526,20 @@ nav {
     padding: 70px 300px 10px 300px;
 }
 
+/* ------------------------------------------*/
+/* ---------------- Outreach ----------------*/
+/* ------------------------------------------*/
+
+.the-problem {
+    padding-bottom: 50px;
+    background-color: rgb(21, 26, 37);
+}
+.the-solution {
+    margin-top: -45px;
+    padding-bottom: 50px;
+    background-color: rgb(33, 39, 48);
+}
+
 /* -----------------------------------------*/
 /* ---------------- Join Us ----------------*/
 /* -----------------------------------------*/
@@ -513,6 +555,7 @@ nav {
     border-radius: 30px;
     width: 200px;
     height: 300px;
+    font-size: 15pt;
     background-color: rgb(33, 39, 48);
 }
 .loc-img {
@@ -544,14 +587,9 @@ nav {
     border-radius: 5px;
     background-color: rgb(33, 39, 48);
     cursor: pointer;
-}
-.accordion::after {
-    content: '+';
-    float: right;
-    font-size: 20pt;
-}
-.accordion.is-open::after {
-    content: '–';
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
 }
 
 .question-content {
@@ -566,12 +604,8 @@ nav {
     margin-top: 5px;
     line-height: 1.3;
 }
-.top-question {
-    border-radius: 30px 30px 5px 5px;
-}
-.bottom-question {
-    border-radius: 5px 5px 30px 30px;
-}
+.top-question {border-radius: 30px 30px 5px 5px;}
+.bottom-question {border-radius: 5px 5px 30px 30px;}
 
 /* ----------------------------------------*/
 /* ---------------- Footer ----------------*/
@@ -729,12 +763,16 @@ footer {
     .paragraph {padding: 40px 100px;}
     .sponsor-packet {padding: 70px 100px 10px 100px;}
     .questions {width: 500px;}
+    #subteam-card {width: 500px; height: 350px};
 }
 @media (max-width: 504px) {
-    .paragraph {padding: 40px 50px;}
     h1 {font-size: 30pt;}
+    .paragraph {padding: 40px 50px;}
     .sponsor-packet {padding: 70px 50px 10px 50px;}
     .questions {width: 300px;}
+    .subteam-img {height: 300px; width: 300px;}
+    #subteam-card {flex-direction: column; width: 300px; height: 100%; margin: 20px 20px;}
+    .subteam-description {width: 240px;}
 }
 
 @media (min-width: 951px) {

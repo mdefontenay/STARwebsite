@@ -676,10 +676,10 @@ footer {
 }
 
 #menu-checkbox {
-    position: fixed;
-    opacity: 0;
+    display: none;
 }
 .menu-button {
+    display: none;
     margin: 4px 10px;
     width: 43px;
     height: 43px;
@@ -689,7 +689,6 @@ footer {
 .menu-button span,
 .menu-button span::before,
 .menu-button span::after {
-    display: block;
     position: absolute;
     border-radius: 10px;
     width: 30px;
@@ -746,26 +745,27 @@ footer {
 /* ---------------- @Media --------------- */
 /* ----------------------------------------*/
 
-@media (max-width: 950px) {
+@media (max-width: 950px) { /* For iPads & Phones */
     .right-menu-bar {display: none;}
     .wide-main-page {display: none;}
     .small-main-page {display: block;}
+    .menu-button {display: block;}
     .cover-img {height: calc(100vh - 50px);}
 }
 
-@media (max-width: 559px) {
+@media (max-width: 559px) { /* For Phones */
     #team-photo {margin-top: -695px; height: 700px;}
     #team-sub {margin-top: 10px}
     #team-photo-text {height: 700px;}
 }
 
-@media (max-width: 950px) and (min-width: 505px) {
+@media (max-width: 950px) and (min-width: 505px) { /* For iPads */
     .paragraph {padding: 40px 100px;}
     .sponsor-packet {padding: 70px 100px 10px 100px;}
     .questions {width: 500px;}
     #subteam-card {width: 500px; height: 350px};
 }
-@media (max-width: 504px) {
+@media (max-width: 504px) { /* For Phones */
     h1 {font-size: 30pt;}
     .paragraph {padding: 40px 50px;}
     .sponsor-packet {padding: 70px 50px 10px 50px;}
@@ -775,10 +775,6 @@ footer {
     .subteam-description {width: 240px;}
 }
 
-@media (min-width: 951px) {
-    .menu-button {display: none;}
-    .menu-content {display: none;}
-}
 @media (max-width: 750px) {
     .footer-content {flex-direction: column; justify-content: center;}
     #footer-social {margin-bottom: 40px; width: 300px;}

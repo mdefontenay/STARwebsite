@@ -282,7 +282,7 @@ nav {
     align-items: center;
     height: 500px;
 }
-#team-sub {
+#team-card {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -291,6 +291,7 @@ nav {
     padding: 15px 0 25px 0;
     border-radius: 35px;
     width: 260px;
+    font-size: 15pt;
     transition-duration: 0.2s;
 }
 #team-num {
@@ -298,7 +299,7 @@ nav {
 }
 
 @media (max-width: 1080px) {
-    #team-sub {
+    #team-card {
         margin: 0 10px;
     }
 }
@@ -316,7 +317,7 @@ nav {
     margin-bottom: 10px;
     height: 150px;
 }
-#ambitions-sub {
+#ambitions-card {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -326,6 +327,7 @@ nav {
     padding: 10px;
     border-radius: 30px;
     width: 260px;
+    font-size: 15pt;
     transition-duration: 0.2s;
 }
 #ambitions-about {
@@ -333,8 +335,8 @@ nav {
     opacity: 60%;
 }
 
-#ambitions-sub:hover,
-#team-sub:hover {
+#ambitions-card:hover,
+#team-card:hover {
     background-color: rgba(255, 255, 255, 0.1);
 }
 
@@ -755,7 +757,7 @@ footer {
 
 @media (max-width: 559px) { /* For Phones */
     #team-photo {margin-top: -695px; height: 700px;}
-    #team-sub {margin-top: 10px}
+    #team-card {margin-top: 10px}
     #team-photo-text {height: 700px;}
 }
 

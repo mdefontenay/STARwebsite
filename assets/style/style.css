@@ -406,6 +406,7 @@ nav {
     height: 100%;
     border-radius: 25px;
     margin: 20px;
+    object-fit: cover;
 }
 
 /* ---------------------------------------*/
@@ -496,8 +497,9 @@ nav {
     width: 100%;
 }
 .packet {
-    padding: 10px 15px;
+    text-align: center;
     margin: 20px 0 0 0;
+    padding: 10px 15px;
     border: solid 2px white;
     border-radius: 100px;
     width: 200px;
@@ -511,7 +513,6 @@ nav {
 .sponsor-logo {
     border-radius: 30px;
     width: 250px;
-    background-color: white;
 }
 #sponsor-card {
     width: 250px;
@@ -569,10 +570,11 @@ tr:last-child {
     width: 100%;
 }
 #loc {
+    line-height: 1.2;
     text-align: center;
     border-radius: 30px;
     width: 300px;
-    height: 450px;
+    height: 420px;
     font-size: 15pt;
     background-color: rgb(33, 39, 48);
 }
@@ -616,6 +618,7 @@ tr:last-child {
     transition-duration: 0.2s;
 }
 #question-answer {
+    line-height: 1.2;
     padding: 30px;
     background-color: rgb(33, 39, 48);
     border-radius: 5px;
